@@ -3,11 +3,18 @@
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
 
+#Es cuando se dispara una accion especifica, puede ser por un cron, un pull request exitoso etc.
 trigger:
 - master
 
+variables:
+  resourceGroup: 'microservices'
+  containerName: 'hello-world-pipeline-2'
+  imageName: 'devs4j/hello-world-pipeline-2'
+  dnsName: 'hello-world-pipeline-2-141695'
+
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'ubuntu-lastest'
 
 steps:
 - script: echo Hello, world!
